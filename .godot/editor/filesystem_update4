@@ -1,2 +1,5 @@
-res://scripts/piano.gd
 res://scripts/key.gd
+res://scenes/main.tscn
+res://scenes/player.tscn
+res://scenes/piano.tscn
+res://scenes/key.tscn

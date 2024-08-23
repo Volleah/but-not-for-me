@@ -4,3 +4,4 @@
 
 [node name="Piano" type="Node2D"]
 script = ExtResource("1_brucy")
+metadata/_edit_lock_ = true

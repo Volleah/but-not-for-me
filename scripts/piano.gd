@@ -1,13 +1,9 @@
 extends Node2D
-var key = preload("res://scripts/key.gd")
+var key = preload("res://scenes/key.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for n in 20:
-		var keyInst = key.instance
-		keyInst.Setup(n,n,"white")
+	for n in range(1, 21):
+		var keyInst = key.instantiate()
+		keyInst.setupKey(n, n, "white")
 		add_child(keyInst)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

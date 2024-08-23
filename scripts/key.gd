@@ -1,31 +1,37 @@
 extends Node2D
 
-var noteSprite
-var audio
+var NoteSprite
+var Note
 
-func setup(pos: float, pitchScale: float, noteColor: String):
-	noteSprite = get_node(noteColor+"Sprite")
-	noteSprite.visible=true
-	audio = get_node("notePlayer")
+
+func setupKey(pos: int, pitchScale: int, noteColor: String):
+	NoteSprite = get_node(noteColor + "Sprite")
+	NoteSprite.visible = true
+	NoteSprite.frame = 0
+	Note = get_node("notePlayer")
 	setPos(pos)
 	setNote(pitchScale)
 
 func setPos(pos: int):
-	var width = 160
-	var height = 90
-	if (pos<1) or (pos>20):
-		print("is NOT in range")
-		return
-	position.y=74
-	position.x=4+(8*(pos-1))
+	position.y = 74
+	position.x = 4 + (8 * (pos - 1))
 
-func setNote(pitchScale: float):
-	audio.pitch_scale = pitchScale
+func setNote(pitchScale: int):
+	Note.pitch_scale = pitchScale
 	
 
 func activate():
-	audio.play()
-	noteSprite.frame=1
+	Note.play()
+	NoteSprite.frame = 1
+	print("activated")
 
 func disable():
-	noteSprite.frame=0
+	NoteSprite.frame = 0
+	print("disabled")
+
+
+func _on_note_area_body_entered(_body: Node2D):
+	activate()
+
+func _on_note_area_body_exited(_body: Node2D):
+	disable()
