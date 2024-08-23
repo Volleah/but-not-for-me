@@ -1,2 +1,2 @@
-# but-not-for-me
+# but not for me
 Music based game made in Godot!
