@@ -23,11 +23,9 @@ func setNote(pitchScale: int):
 func activate():
 	Note.play()
 	NoteSprite.frame = 1
-	print("activated")
 
 func disable():
 	NoteSprite.frame = 0
-	print("disabled")
 
 
 func _on_note_area_body_entered(_body: Node2D):
