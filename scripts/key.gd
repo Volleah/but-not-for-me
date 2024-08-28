@@ -16,8 +16,9 @@ func setPos(pos: int):
 	position.y = 74
 	position.x = 4 + (8 * (pos - 1))
 
-func setNote(pitchScale: int):
-	Note.pitch_scale = pitchScale
+func setNote(pitchScale: float):
+	var pitch = pow(2, (pitchScale / 12))
+	Note.pitch_scale = pitch
 	
 
 func activate():
