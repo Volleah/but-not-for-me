@@ -12,3 +12,7 @@ func _ready():
 	playerInst.position.x = 80
 	playerInst.position.y = 50
 	add_child(playerInst)
+
+func _prrocess():
+	if Input.is_action_pressed("restart"):
+		_ready()
