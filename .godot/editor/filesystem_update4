@@ -1,6 +1,4 @@
+res://sandbox_menu.tscn
 res://scenes/main.tscn
-res://scripts/main.gd
-res://scripts/player.gd
-res://scenes/player.tscn
-res://scenes/piano.tscn
 res://scenes/key.tscn
+res://scenes/sandbox_menu.tscn
