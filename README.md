@@ -1,4 +1,4 @@
-# Sentimental Housecat
+# Sentimental Housecat (Name TBD)
 Sentimental Housecat is a pixelated platformer where the player controls a cat navigating a giant piano. Each jump between keys triggers a corresponding musical note, creating a unique melody as the player progresses.
 ### Current Features
  - Core piano platforming mechanics
