@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725348517
+::res://::1725773706
 icon.svg::CompressedTexture2D::3893311054510165992::1724390374::1724390386::1::::<><>::
 README.md::TextFile::-1::1724435596::0::1::::<><>::
 ::res://assets/::1725348517
@@ -17,12 +17,12 @@ ghost.png::CompressedTexture2D::2522499274092900313::1724390375::1724390386::1::
 whitepianokey1.png::CompressedTexture2D::7397413749485775556::1724390375::1724390386::1::::<><>::
 whitepianokey2.png::CompressedTexture2D::8549847778542072336::1724390375::1724390386::1::::<><>::
 whitepianokeys.png::CompressedTexture2D::6409566195766719273::1724390375::1724390386::1::::<><>::
-::res://scenes/::1725348503
-key.tscn::PackedScene::8378368068282334207::1725344545::0::1::::<><>::res://scripts/key.gd<>uid://cxk3vbld7ljh6::::res://assets/textures/whitepianokeys.png<>uid://hbqa5lub8yab::::res://assets/textures/blackpianokeys.png<>uid://djbmixx2xps5q::::res://assets/audio/music_c.wav
-main.tscn::PackedScene::1848346420207879130::1725344545::0::1::::<><>::res://scripts/main.gd<>uid://b4oqqpugbxlmw::::res://assets/textures/background.png
+::res://scenes/::1725699938
+key.tscn::PackedScene::8378368068282334207::1725699938::0::1::::<><>::res://scripts/key.gd<>uid://cxk3vbld7ljh6::::res://assets/textures/whitepianokeys.png<>uid://hbqa5lub8yab::::res://assets/textures/blackpianokeys.png<>uid://djbmixx2xps5q::::res://assets/audio/music_c.wav
+main.tscn::PackedScene::1848346420207879130::1725699938::0::1::::<><>::res://scripts/main.gd<>uid://b4oqqpugbxlmw::::res://assets/textures/background.png
 piano.tscn::PackedScene::7969055909881190052::1725255992::0::1::::<><>::res://scripts/piano.gd
 player.tscn::PackedScene::4097880441879261870::1725255992::0::1::::<><>::res://scripts/player.gd<>uid://csc8krh58024a::::res://assets/textures/darkghost.png
-sandbox_menu.tscn::PackedScene::8150925271419483804::1725344545::0::1::::<><>::
+sandbox_menu.tscn::PackedScene::8150925271419483804::1725699938::0::1::::<><>::uid://bs6r2ou17bsh1::::res://assets/fonts/JosefinSans-VariableFont_wght.ttf
 ::res://scripts/::1724756026
 key.gd::GDScript::-1::1724852942::0::1::::<>Node2D<>::
 main.gd::GDScript::-1::1725256001::0::1::::<>Node2D<>::

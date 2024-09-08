@@ -1,40 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://doemsv5s1x1p5"]
+[gd_scene format=3 uid="uid://doemsv5s1x1p5"]
 
-[ext_resource type="FontFile" uid="uid://bs6r2ou17bsh1" path="res://assets/fonts/JosefinSans-VariableFont_wght.ttf" id="1_axq1i"]
-
-[sub_resource type="Theme" id="Theme_iwhuq"]
-default_font = ExtResource("1_axq1i")
-default_font_size = 12
-
-[node name="sandboxMenu" type="Control"]
+[node name="Settings" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="backgroundColor" type="ColorRect" parent="."]
-layout_mode = 2
-offset_left = -80.0
-offset_top = -45.0
-offset_right = 80.0
-offset_bottom = 45.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.113725, 0.129412, 0.129412, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -80.0
-offset_top = -16.0
-offset_right = 68.0
-offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 4
@@ -42,21 +20,40 @@ theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="settingsContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 3
-alignment = 1
 
-[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer/settingsContainer"]
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme = SubResource("Theme_iwhuq")
+current_tab = 1
 
-[node name="Label" type="Label" parent="MarginContainer/settingsContainer/VBoxContainer"]
+[node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Master" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Audio"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Audio/Master"]
+layout_mode = 2
+text = "Master Audio"
+
+[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/Master"]
+layout_mode = 2
+
+[node name="Piano" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="noteAmount" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Piano"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Piano/noteAmount"]
 layout_mode = 2
 text = "Note Amount"
 
-[node name="noteAmountSpinBox" type="SpinBox" parent="MarginContainer/settingsContainer/VBoxContainer"]
+[node name="noteAmountSpinBox" type="SpinBox" parent="MarginContainer/VBoxContainer/TabContainer/Piano/noteAmount"]
 layout_mode = 2
 tooltip_text = "Amount of Notes
 "
@@ -65,46 +62,74 @@ value = 14.0
 rounded = true
 alignment = 1
 
-[node name="rootKeySelect" type="HBoxContainer" parent="MarginContainer/settingsContainer"]
+[node name="rootKeySelect" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Piano"]
 layout_mode = 2
-theme = SubResource("Theme_iwhuq")
 
-[node name="Label" type="Label" parent="MarginContainer/settingsContainer/rootKeySelect"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Piano/rootKeySelect"]
 layout_mode = 2
 text = "Key Note"
 
-[node name="ItemList" type="ItemList" parent="MarginContainer/settingsContainer/rootKeySelect"]
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Piano/rootKeySelect"]
 layout_mode = 2
-item_count = 12
-item_0/text = "C"
-item_1/text = "Db"
-item_2/text = "D"
-item_3/text = "Eb"
-item_4/text = "E"
-item_5/text = "F"
-item_6/text = "Gb"
-item_7/text = "G"
-item_8/text = "Ab"
-item_9/text = "A"
-item_10/text = "Bb"
-item_11/text = "B"
+selected = 0
+fit_to_longest_item = false
+item_count = 10
+popup/item_0/text = "C"
+popup/item_1/text = "C#/Db"
+popup/item_1/id = 1
+popup/item_2/text = "E"
+popup/item_2/id = 2
+popup/item_3/text = "F"
+popup/item_3/id = 3
+popup/item_4/text = "F#/Gb"
+popup/item_4/id = 4
+popup/item_5/text = "G"
+popup/item_5/id = 5
+popup/item_6/text = "G#/Ab"
+popup/item_6/id = 6
+popup/item_7/text = "A"
+popup/item_7/id = 7
+popup/item_8/text = "A#/Bb"
+popup/item_8/id = 8
+popup/item_9/text = "B"
+popup/item_9/id = 9
 
-[node name="scaleMode" type="HBoxContainer" parent="MarginContainer/settingsContainer"]
+[node name="scaleMode" type="HBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Piano"]
 layout_mode = 2
-theme = SubResource("Theme_iwhuq")
 
-[node name="Label" type="Label" parent="MarginContainer/settingsContainer/scaleMode"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Piano/scaleMode"]
 layout_mode = 2
 text = "Mode"
 
-[node name="ItemList" type="ItemList" parent="MarginContainer/settingsContainer/scaleMode"]
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Piano/scaleMode"]
 layout_mode = 2
+selected = 0
+fit_to_longest_item = false
 item_count = 8
-item_0/text = "Major"
-item_1/text = "Minor"
-item_2/text = "Harrmonic Major"
-item_3/text = "Harmonic Minor"
-item_4/text = "Melodic Minor"
-item_5/text = "Double Harmonic Major"
-item_6/text = "Neapolitan Majorr"
-item_7/text = "Neapolitan Minor"
+popup/item_0/text = "Major"
+popup/item_1/text = "Minor"
+popup/item_1/id = 1
+popup/item_2/text = "Harmonic Major"
+popup/item_2/id = 2
+popup/item_3/text = "Harmonic Minor"
+popup/item_3/id = 3
+popup/item_4/text = "Melodic Minor"
+popup/item_4/id = 4
+popup/item_5/text = "Double Harmonic Major"
+popup/item_5/id = 5
+popup/item_6/text = "Neapolitan Major"
+popup/item_6/id = 6
+popup/item_7/text = "Neapolitan Minor"
+popup/item_7/id = 7
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Exit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Exit
+"
+
+[node name="Save" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Save"

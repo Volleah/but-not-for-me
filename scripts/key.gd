@@ -13,8 +13,8 @@ func setupKey(pos: int, pitchScale: int, noteColor: String):
 	setNote(pitchScale)
 
 func setPos(pos: int):
-	position.y = 74
-	position.x = 4 + (8 * (pos - 1))
+	position.y = 74 * 2
+	position.x = 8 + (16 * (pos - 1))
 
 func setNote(pitchScale: float):
 	var pitch = pow(2, (pitchScale / 12))
