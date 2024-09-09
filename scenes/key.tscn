@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://drmsq6w8t47u6"]
+[gd_scene load_steps=7 format=3 uid="uid://drmsq6w8t47u6"]
 
 [ext_resource type="Script" path="res://scripts/key.gd" id="1_4xn4f"]
 [ext_resource type="Texture2D" uid="uid://cxk3vbld7ljh6" path="res://assets/textures/whitepianokeys.png" id="2_lqv2t"]
 [ext_resource type="Texture2D" uid="uid://hbqa5lub8yab" path="res://assets/textures/blackpianokeys.png" id="3_673b4"]
 [ext_resource type="AudioStream" uid="uid://djbmixx2xps5q" path="res://assets/audio/music_c.wav" id="4_ardb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vwo7"]
+size = Vector2(8, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csw6y"]
 size = Vector2(16, 64)
@@ -16,7 +19,7 @@ metadata/_edit_lock_ = true
 
 [node name="noteCollisionShape" type="CollisionShape2D" parent="noteArea"]
 position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_csw6y")
+shape = SubResource("RectangleShape2D_8vwo7")
 
 [node name="whiteSprite" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)

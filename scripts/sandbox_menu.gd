@@ -1,5 +1,6 @@
 extends Control
 
+var musicConfig = ConfigFile.new()
 
 func _ready():
 	visible = false
