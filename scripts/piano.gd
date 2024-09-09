@@ -1,15 +1,20 @@
+@tool
+
 extends Node2D
 
-@export var pianoScale = [1, 3, 5, 6, 8, 10, 12, 13]
-@export var startSpot = 3
+const FONT := preload("res://assets/fonts/Kenney Future Narrow.ttf")
 
-var key = preload("res://scenes/key.tscn")
+var _keys: Array = []
+var _notes: PackedStringArray = PackedStringArray()
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	var spot = startSpot
-	for pitch in pianoScale:
-		var keyInst = key.instantiate()
-		keyInst.setupKey(spot, pitch, "white")
-		add_child(keyInst)
-		spot += 1
+var _activeKey: int = -1
+
+class Key:
+      var area: Rect2 = Rect2()
+      var note: String = ""
+      var index: int = -1
+      
+      func _init(area_: Rect2, note_: String, index_: int) -> void:
+            area = area_
+            note = note_
+            index = index_
