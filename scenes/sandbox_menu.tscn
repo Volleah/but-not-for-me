@@ -1,12 +1,17 @@
-[gd_scene format=3 uid="uid://doemsv5s1x1p5"]
+[gd_scene load_steps=3 format=3 uid="uid://doemsv5s1x1p5"]
+
+[ext_resource type="Script" path="res://scripts/sandbox_menu.gd" id="1_1kb7w"]
+[ext_resource type="PackedScene" uid="uid://b1e7v2khpg78a" path="res://scenes/volume_slider.tscn" id="2_xitx4"]
 
 [node name="Settings" type="Control"]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1kb7w")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -25,10 +30,9 @@ layout_mode = 2
 
 [node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-current_tab = 1
+current_tab = 0
 
 [node name="Audio" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -39,10 +43,11 @@ layout_mode = 2
 layout_mode = 2
 text = "Master Audio"
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/Master"]
+[node name="volumeSlider" parent="MarginContainer/VBoxContainer/TabContainer/Audio/Master" instance=ExtResource("2_xitx4")]
 layout_mode = 2
 
 [node name="Piano" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
