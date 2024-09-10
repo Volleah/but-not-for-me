@@ -1,7 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlsjglv36tpmi"]
+[gd_scene load_steps=3 format=3 uid="uid://dlsjglv36tpmi"]
 
 [ext_resource type="Script" path="res://scripts/piano.gd" id="1_brucy"]
+[ext_resource type="PackedScene" uid="uid://doemsv5s1x1p5" path="res://scenes/sandbox_menu.tscn" id="2_1fy0x"]
 
 [node name="Piano" type="Node2D"]
 script = ExtResource("1_brucy")
+key_amount = null
+key_width = null
+key_height = null
+
+[node name="Settings" parent="." instance=ExtResource("2_1fy0x")]
+top_level = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 116.0
+offset_top = 90.0
+offset_right = 116.0
+offset_bottom = 90.0
+grow_horizontal = 1
+grow_vertical = 1
 metadata/_edit_lock_ = true
