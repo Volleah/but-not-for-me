@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1725888981
+::res://::1725961201
 icon.svg::CompressedTexture2D::3893311054510165992::1724390374::1724390386::1::::<><>::
 README.md::TextFile::-1::1724435596::0::1::::<><>::
 ::res://assets/::1725888746
@@ -7,17 +7,18 @@ ghost.png::CompressedTexture2D::2522499274092900313::1724390375::1725888741::1::
 ::res://assets/fonts/::1725888251
 Kenney Future Narrow.ttf::FontFile::1752130751324800048::1720532173::1725888251::1::::<><>::
 License.txt::TextFile::-1::1720532173::0::1::::<><>::
-::res://bin/::1725888977
+::res://bin/::1725961195
 libgdsion.gdextension::GDExtension::-1::1725874878::0::1::::<><>::
-::res://scenes/::1725888696
-main.tscn::PackedScene::1848346420207879130::1725875165::0::1::::<><>::res://scripts/main.gd<>uid://b4oqqpugbxlmw::::res://assets/textures/background.png
-piano.tscn::PackedScene::7969055909881190052::1725875165::0::1::::<><>::res://scripts/piano.gd<>uid://doemsv5s1x1p5::::res://scenes/sandbox_menu.tscn
+::res://scenes/::1725894606
+main.tscn::PackedScene::1848346420207879130::1725889012::0::1::::<><>::res://scripts/main.gd
+piano.tscn::PackedScene::7969055909881190052::1725894606::0::1::::<><>::res://scripts/piano.gd<>uid://doemsv5s1x1p5::::res://scenes/sandbox_menu.tscn
 player.tscn::PackedScene::4097880441879261870::1725877739::0::1::::<><>::res://scripts/player.gd<>uid://csc8krh58024a::::res://assets/textures/darkghost.png
 sandbox_menu.tscn::PackedScene::8150925271419483804::1725874090::0::1::::<><>::res://scripts/sandbox_menu.gd<>uid://b1e7v2khpg78a::::res://scenes/volume_slider.tscn
 volume_slider.tscn::PackedScene::4221570008655576802::1725871922::0::1::::<><>::res://scripts/volume_slider.gd
-::res://scripts/::1725888705
+::res://scripts/::1725889445
+key.gd::GDScript::-1::1725889500::0::1::::<>Node2D<>::
 main.gd::GDScript::-1::1725256001::0::1::::<>Node2D<>::
-piano.gd::GDScript::-1::1725888923::0::1::::<>Node2D<>::
+piano.gd::GDScript::-1::1725894599::0::1::::<>Node2D<>::
 player.gd::GDScript::-1::1724850112::0::1::::<>CharacterBody2D<>::
-sandbox_menu.gd::GDScript::-1::1725875632::0::1::::<>Control<>::
+sandbox_menu.gd::GDScript::-1::1725889132::0::1::::<>Control<>::
 volume_slider.gd::GDScript::-1::1725871910::0::1::::<>HSlider<>::

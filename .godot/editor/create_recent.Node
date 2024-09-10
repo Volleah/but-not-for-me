@@ -1,3 +1,5 @@
+ResourcePreloader
+Sprite2D
 Node2D
 HSlider
 Button
@@ -11,5 +13,3 @@ Panel
 TabContainer
 MarginContainer
 ItemList
-CenterContainer
-BoxContainer
