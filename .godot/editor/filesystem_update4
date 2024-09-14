@@ -1,0 +1,5 @@
+res://scripts/player.gd
+res://scripts/piano.gd
+res://scenes/piano.tscn
+res://scenes/main.tscn
+res://scenes/player.tscn
