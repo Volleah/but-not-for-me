@@ -1,3 +1,6 @@
+Node2D
+ResourcePreloader
+Sprite2D
 HSlider
 Button
 HBoxContainer
@@ -9,6 +12,3 @@ Label
 Panel
 TabContainer
 MarginContainer
-ItemList
-CenterContainer
-BoxContainer

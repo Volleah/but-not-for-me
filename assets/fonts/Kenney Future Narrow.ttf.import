@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bs6r2ou17bsh1"
-path="res://.godot/imported/JosefinSans-VariableFont_wght.ttf-906d4aff757f9a15984a59b151a14640.fontdata"
+uid="uid://y70lqerdtol1"
+path="res://.godot/imported/Kenney Future Narrow.ttf-ef7e34836d9e5dc059ca737da9380cb7.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/JosefinSans-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/JosefinSans-VariableFont_wght.ttf-906d4aff757f9a15984a59b151a14640.fontdata"]
+source_file="res://assets/fonts/Kenney Future Narrow.ttf"
+dest_files=["res://.godot/imported/Kenney Future Narrow.ttf-ef7e34836d9e5dc059ca737da9380cb7.fontdata"]
 
 [params]
 
