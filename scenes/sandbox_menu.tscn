@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://b1e7v2khpg78a" path="res://scenes/volume_slider.tscn" id="2_xitx4"]
 
 [node name="Settings" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
